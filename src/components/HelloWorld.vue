@@ -4,7 +4,7 @@
       <input type="text" placeholder="First Name" v-model="firstName" />
     </div>
     <div class="input-container">
-      <input type="text" placeholder="Last Name" v-model="lastName" />
+      <custom-input v-model="lastName" />
     </div>
     <div class="input-container">
       <span> Hi, {{ fullname }} </span>
@@ -15,12 +15,14 @@
 
 <script>
 import Button from "./Button.vue";
+import CustomInput from "./CustomInput.vue";
 import { mapState } from "vuex";
 
 export default {
   name: "HelloWorld",
   components: {
     "my-button": Button,
+    CustomInput,
   },
   data: () => ({
     firstName: "",
